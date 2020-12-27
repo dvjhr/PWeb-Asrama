@@ -1,6 +1,12 @@
 <?php
     include 'header.php';
     include 'navbar.php';
+
+    $id = 1;
+    $sql_gedung = "SELECT * FROM gedung";
+    $rows_gedung = mysqli_query($conn, $sql_gedung);
+    mysqli_close($conn);
+
 ?>
 
     <!--::industries start::-->
@@ -16,116 +22,19 @@
             </div>
             <!-- Daftar Gedung  -->
             <div class="row">
+                <?php foreach ($rows_gedung as $row) : ?>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_ihotel_list">
                         <img src="img/ind/gedung_asrama.jpg" alt="">
                         <div class="hotel_text_iner">
-                            <h3> <a href="gedung/gedung_a.php?id_gedung=1">Gedung A</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>From <span>Rp 500.000</span></p>
+                            <?php $a=$row['id_gedung'];$b=$row['nama'];echo "<h3> <a href='gedung/gedung_a.php?id_gedung=$a'>Gedung $b</a></h3>" ?>
+                            <p><?= $row['penghuni']?></p>
+                            <p>Kapasitas <?= $row['kapasitas']?> orang</p>
+                            <p>From <span>Rp <?= $row['harga_termurah']?></span></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="gedung/gedung_a.php?id_gedung=2">Gedung B</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>From <span>Rp 500.000</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="gedung/gedung_a.php?id_gedung=3">Gedung C</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>From <span>Rp 500.000</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="gedung/gedung_a.php?id_gedung=4">Gedung D</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>From <span>Rp 500.000</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="gedung/gedung_a.php?id_gedung=5">Gedung E</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>From <span>Rp 500.000</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="gedung/gedung_a.php?id_gedung=6">Gedung H</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>From <span>Rp 500.000</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="gedung/gedung_a.php?id_gedung=7">Gedung I</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>From <span>Rp 500.000</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="gedung/gedung_a.php?id_gedung=8">Gedung J</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>From <span>Rp 500.000</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="gedung/gedung_a.php?id_gedung=9">Gedung K</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>From <span>Rp 500.000</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="gedung/gedung_a.php?id_gedung=10">Gedung G</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>From <span>Rp 500.000</span></p>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach;?> 
             </div>
         </div>
     </section>

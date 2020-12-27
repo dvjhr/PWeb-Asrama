@@ -6,7 +6,7 @@
     $akun = $_SESSION['nrp'];
     $kamar = $_GET['id_kamar'];
     $sql_akun = "SELECT * FROM user where nrp = $akun";
-    $sql_kamar = "SELECT id_kamar, kamar.nama AS nama_kamar, kapasitas, harga, gedung.nama AS nama_gedung FROM kamar LEFT JOIN gedung ON kamar.id_gedung=gedung.id_gedung WHERE id_kamar = $kamar";
+    $sql_kamar = "SELECT id_kamar, kamar.nama AS nama_kamar, kamar.kapasitas, harga, gedung.nama AS nama_gedung FROM kamar LEFT JOIN gedung ON kamar.id_gedung=gedung.id_gedung WHERE id_kamar = $kamar";
 
     $rows_akun = mysqli_query($conn, $sql_akun);
     $rows_kamar = mysqli_query($conn, $sql_kamar);
@@ -25,7 +25,7 @@
                         <h2 class="mb-20">Detail Pemesanan</h2>
                         <ul class="unordered-list">
                             <?php foreach ($rows_akun as $row) : ?>
-                            <li class="list-biasa"> Nama: <?=  $row['nama'] ?></li>
+                            <li class="list-biasa"> Nama: <h5><?=  $row['nama'] ?></h5></li>
                             <li class="list-biasa"> NRP: <?=  $row['nrp'] ?></li>
                             <li class="list-biasa"> Departemen: <?=  $row['departemen'] ?></li>
                             <?php endforeach;?>
