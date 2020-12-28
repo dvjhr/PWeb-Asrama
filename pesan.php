@@ -25,16 +25,16 @@
                         <h2 class="mb-20">Detail Pemesanan</h2>
                         <ul class="unordered-list">
                             <?php foreach ($rows_akun as $row) : ?>
-                            <li class="list-biasa"> Nama: <h5><?=  $row['nama'] ?></h5></li>
-                            <li class="list-biasa"> NRP: <?=  $row['nrp'] ?></li>
-                            <li class="list-biasa"> Departemen: <?=  $row['departemen'] ?></li>
+                            <li class="list-biasa"> Nama: <h4><?=  $row['nama'] ?></h4></li>
+                            <li class="list-biasa"> NRP: <h4><?=  $row['nrp'] ?></h4></li>
+                            <li class="list-biasa"> Departemen: <h4><?=  $row['departemen'] ?></h4></li>
                             <?php endforeach;?>
                             
                             <?php foreach ($rows_kamar as $row) : ?>
-                            <li class="list-biasa"> Kamar: <?=  $row['nama_kamar'] ?></li>
-                            <li class="list-biasa"> Gedung: <?=  $row['nama_gedung'] ?></li>
-                            <li class="list-biasa"> Kapasitas: <?=  $row['kapasitas'] ?> orang</li>
-                            <li class="list-biasa"> Harga: Rp <?=  $row['harga'] ?></li>
+                            <li class="list-biasa"> Kamar: <h4><?=  $row['nama_kamar'] ?></h4></li>
+                            <li class="list-biasa"> Gedung: <h4><?=  $row['nama_gedung'] ?></h4></li>
+                            <li class="list-biasa"> Kapasitas: <h4><?=  $row['kapasitas'] ?></h4> orang</li>
+                            <li class="list-biasa"> Harga: <h4>Rp <?=  $row['harga'] ?></h4></li>
                             <?php endforeach;?>
                             
                         </ul>

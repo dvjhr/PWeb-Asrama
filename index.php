@@ -3,7 +3,11 @@
     include 'header.php';
     include 'navbar.php';
 
-    
+    $id = 1;
+    $sql_gedung = "SELECT * FROM gedung LIMIT 3";
+    $rows_gedung = mysqli_query($conn, $sql_gedung);
+    mysqli_close($conn);
+
 ?>
 
     <!-- banner part start-->
@@ -291,39 +295,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="/pweb/gedung/gedung_a.php">Gedung A</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>Mulai <span>Rp 500.000</span></p>
+                <?php foreach ($rows_gedung as $row) : ?>
+                    <div class="col-lg-4 col-sm-6 pt-3 pb-3">
+                        <div class="single_ihotel_list">
+                            <img src="img/ind/gedung_asrama.jpg" alt="">
+                            <div class="hotel_text_iner">
+                                <?php $a=$row['id_gedung'];$b=$row['nama'];echo "<h3> <a href='gedung/gedung_a.php?id_gedung=$a'>Gedung $b</a></h3>" ?>
+                                <p><?= $row['penghuni']?></p>
+                                <p>Kapasitas <?= $row['kapasitas']?> orang</p>
+                                <p>From <span>Rp <?= $row['harga_termurah']?></span></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="#">Gedung B</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>Mulai <span>Rp 500.000</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/ind/gedung_asrama.jpg" alt="">
-                        <div class="hotel_text_iner">
-                            <h3> <a href="#">Gedung C</a></h3>
-                            <p>Mahasiswi (Perempuan)</p>
-                            <p>Kapasitas 48 orang</p>
-                            <p>Mulai <span>Rp 500.000</span></p>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach;?> 
             </div>
             <div class="mt-30 row justify-content-center">
                 <a href="gedung.php" class="btn_1">Lihat Semua Gedung</a>

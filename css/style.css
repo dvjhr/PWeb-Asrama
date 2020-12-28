@@ -4401,6 +4401,21 @@ h6 {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+.genric-btn-special {
+  display: inline-block;
+  outline: none;
+  line-height: 40px;
+  padding: 5px 30px;
+  /* font-size: .8em; */
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
 
 /* line 166, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_elements.scss */
 .genric-btn:focus {
@@ -4480,28 +4495,28 @@ h6 {
 }
 
 /* line 217, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_elements.scss */
-.genric-btn.primary {
+.genric-btn.primary, .genric-btn-special.primary {
   color: #fff;
   background: #fe5c24;
   border: 1px solid transparent;
 }
 
 /* line 221, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_elements.scss */
-.genric-btn.primary:hover {
+.genric-btn.primary:hover, .genric-btn-special.primary:hover {
   color: #fe5c24;
   border: 1px solid #fe5c24;
   background: #fff;
 }
 
 /* line 227, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_elements.scss */
-.genric-btn.primary-border {
+.genric-btn.primary-border, .genric-btn-special.primary-border {
   color: #fe5c24;
   border: 1px solid #fe5c24;
   background: #fff;
 }
 
 /* line 231, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_elements.scss */
-.genric-btn.primary-border:hover {
+.genric-btn.primary-border:hover, .genric-btn-special.primary-border:hover {
   color: #fff;
   background: #fe5c24;
   border: 1px solid transparent;

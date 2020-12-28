@@ -23,7 +23,7 @@
             <!-- Daftar Gedung  -->
             <div class="row">
                 <?php foreach ($rows_gedung as $row) : ?>
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-4 col-sm-6 pt-3 pb-3">
                     <div class="single_ihotel_list">
                         <img src="img/ind/gedung_asrama.jpg" alt="">
                         <div class="hotel_text_iner">

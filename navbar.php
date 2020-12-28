@@ -17,9 +17,6 @@
                                 id="navbarSupportedContent">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/pweb/index.php">Home</a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a class="nav-link" href="/pweb/gedung.php">Gedung</a>
                                     </li>
                                     <li class="nav-item">
@@ -28,35 +25,12 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="/pweb/about.html">About</a>
                                     </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/pweb/blog.html" id="navbarDropdown"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            Blog
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="/pweb/blog.html">Blog</a>
-                                            <a class="dropdown-item" href="/pweb/single-blog.html">Single blog</a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="/pweb/blog.html" id="navbarDropdown_1"
-                                            role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            pages
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                            <a class="dropdown-item" href="/pweb/top_place.html">top place</a>
-                                            <a class="dropdown-item" href="/pweb/tour_details.html">tour details</a>
-                                            <a class="dropdown-item" href="/pweb/elements.html">Elements</a>
-                                        </div>
-                                    </li>
                                 </ul>
                             </div>
                             <div id="tombol_navbar_kanan" class="header-btn d-none f-right d-lg-block">
                                 <?php if($_SESSION) : ?>
-                                        <a href="profil.php"><?php echo $_SESSION['nrp']; ?></a>
-                                        <a href="/pweb/logout.php" class="btn_1">Logout</a>
+                                        <a href="profil.php" class="genric-btn-special primary-border"><?php echo $_SESSION['nrp']; ?></a>
+                                        <a href="/pweb/logout.php" class="genric-btn-special primary">Logout</a>
                                 <?php else : ?>
                                         <a href="/pweb/login.php" class="btn_1">Masuk</a>
                                         <a href="/pweb/daftar.php" class="btn_1">Daftar</a>
