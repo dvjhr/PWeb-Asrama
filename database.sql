@@ -185,6 +185,8 @@ CREATE TABLE `user` (
  CONSTRAINT `FK_user_kamar` FOREIGN KEY (`id_kamar_tinggal`) REFERENCES `kamar` (`id_kamar`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+UPDATE user SET  user.id_kamar_tinggal = &id_kamar where user.id_user = $id_user;
+
 ALTER TABLE `gedung`
 ALTER COLUMN `jkamar1` VARCHAR(32),
 ALTER COLUMN `jkamar2` VARCHAR(32),

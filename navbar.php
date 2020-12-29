@@ -29,7 +29,7 @@
                             </div>
                             <div id="tombol_navbar_kanan" class="header-btn d-none f-right d-lg-block">
                                 <?php if($_SESSION) : ?>
-                                        <a href="profil.php" class="genric-btn-special primary-border"><?php echo $_SESSION['nrp']; ?></a>
+                                        <a href="/pweb/profil.php" class="genric-btn-special primary-border"><?php echo $_SESSION['nrp']; ?></a>
                                         <a href="/pweb/logout.php" class="genric-btn-special primary">Logout</a>
                                 <?php else : ?>
                                         <a href="/pweb/login.php" class="btn_1">Masuk</a>

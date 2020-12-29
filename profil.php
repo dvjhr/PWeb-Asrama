@@ -4,7 +4,8 @@
     include 'navbar.php';
 
     $akun = $_SESSION['nrp'];
-    $sql_akun = "SELECT * FROM user where nrp = $akun";
+    $id_user = $_SESSION['id_user'];
+    $sql_akun = "SELECT user.nama, user.nrp, user.departemen, user.no_telp, user.email, kamar.nama as kamar FROM user LEFT JOIN kamar ON user.id_kamar_tinggal=kamar.id_kamar where id_user = $id_user";
 
     $rows_akun = mysqli_query($conn, $sql_akun);
 
@@ -26,7 +27,7 @@
                             <li class="list-biasa"><p>Departemen: </p><h4><?=  $row['departemen'] ?></h4></li>
                             <li class="list-biasa"><p>No Telepon: </p><h4><?=  $row['no_telp'] ?></h4></li>
                             <li class="list-biasa"><p>E-Mail: </p><h4><?=  $row['email'] ?></h4></li>
-                            <li class="list-biasa"><p>Kamar saat ini: </p><h4><?=  $row['id_kamar_tinggal'] ?></h4></li>
+                            <li class="list-biasa"><p>Kamar saat ini: </p><h4><?=  $row['kamar'] ?></h4></li>
                             <?php endforeach;?>
                         </ul>
                     </div>

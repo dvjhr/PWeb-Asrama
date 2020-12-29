@@ -38,7 +38,7 @@
             '$jenis_kelamin')";
             $insert_user = mysqli_query($conn, $query);
 
-            //echo 'masuk lur';
+            header('Location:login.php');
             }
         
 
@@ -83,7 +83,7 @@
                     </div>
                     <div class="mt-10">
                         <input type="text" name="departemen" placeholder="Departemen"
-                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required
+                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Departemen'" required
                             class="single-input">
                     </div>
                     <div class="mt-10">
