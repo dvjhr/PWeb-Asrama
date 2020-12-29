@@ -40,16 +40,16 @@ CREATE TABLE `gedung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `gedung` (`nama`, `penghuni`, `lantai`, `kapasitas`, `fasilitas`) VALUES 
-("A", "Mahasiswi", 2, 48, 2),
-("B", "Mahasiswi", 3, 36, 1),
-("C", "Mahasiswi", 4, 40, 1),
-("D", "Mahasiswa", 3, 36, 2),
-("E", "Mahasiswa", 3, 36, 2),
-("G", "Mahasiswa", 3, 36, 1),
-("H", "Mahasiswa", 3, 36, 1),
-("I", "Mahasiswi", 3, 36, 1),
-("J", "Mahasiswi", 3, 36, 1),
-("K", "Mahasiswi", 3, 36, 1);
+("A", "Perempuan", 2, 48, 2),
+("B", "Perempuan", 3, 36, 1),
+("C", "Perempuan", 4, 40, 1),
+("D", "Laki-laki", 3, 36, 2),
+("E", "Laki-laki", 3, 36, 2),
+("G", "Laki-laki", 3, 36, 1),
+("H", "Laki-laki", 3, 36, 1),
+("I", "Perempuan", 3, 36, 1),
+("J", "Perempuan", 3, 36, 1),
+("K", "Perempuan", 3, 36, 1);
 
 CREATE TABLE `kamar` (
   `id_kamar` int(4) AUTO_INCREMENT NOT NULL, 
@@ -185,9 +185,17 @@ CREATE TABLE `user` (
  CONSTRAINT `FK_user_kamar` FOREIGN KEY (`id_kamar_tinggal`) REFERENCES `kamar` (`id_kamar`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
 ALTER TABLE `gedung`
 ALTER COLUMN `jkamar1` VARCHAR(32),
 ALTER COLUMN `jkamar2` VARCHAR(32),
 ALTER COLUMN `jkamar3` VARCHAR(32),
 KEY (`jkamar1`, `jkamar2`, `jkamar3`) REFERENCES `jenis_kamar` (`id_jenis_kamar`) ON DELETE CASCADE;
+
+CREATE TABLE `transaksi` (
+  `id_transaksi` int(4) AUTO_INCREMENT NOT NULL,
+  `nrp` varchar(14) DEFAULT NULL,
+  `id_kamar` int(4) DEFAULT NULL,
+  PRIMARY KEY (`id_transaksi`),
+  CONSTRAINT `FK_transaksi_user` FOREIGN KEY (`nrp`) REFERENCES `user` (`nrp`) ON DELETE CASCADE,
+  CONSTRAINT `FK_transaksi_kamar` FOREIGN KEY (`id_kamar`) REFERENCES `kamar` (`id_kamar`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

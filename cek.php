@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-6">
-                    <h2 class="section_tittle text-center">Booking Sekarang</h2>
+                    <h2 class="section_tittle text-center">Cek Ketersesiaan</h2>
                 </div>
                 <div class="col-lg-12">
                     <div class="booking_content">

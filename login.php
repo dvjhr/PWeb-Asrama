@@ -21,6 +21,7 @@
         if ($row_found) {
             while ($row = mysqli_fetch_assoc($check_user)) {
                 $nrp = $row['nrp'];
+                $id_user = $row['id_user'];
                 $sandi_temp = $row['sandi'];
             }
             $cek = password_verify($sandi, $sandi_temp);
@@ -28,6 +29,7 @@
                 
                 //session_start();
                 $_SESSION['nrp'] = $nrp;
+                $_SESSION['id_user'] = $id_user;
                 print $row_found;
                 echo 'Mashoook'.$_SESSION['nrp'];
                 header('Location: index.php');

@@ -327,29 +327,22 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/services_1.png" alt="">
-                        <h3> <a href="#">Kamar Mandi</a></h3>
-                        <p>All transportation cost we bear</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-sm-6 ml-3 mr-4">
                     <div class="single_ihotel_list">
                         <img src="img/services_2.png" alt="">
                         <h3> <a href="#">Aula</a></h3>
                         <p>We offer the best guidence for you</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 ml-3 mr-4">
                     <div class="single_ihotel_list">
                         <img src="img/services_3.png" alt="">
                         <h3> <a href="#">Kantin</a></h3>
                         <p>Luxarious and comfortable</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 ml-3 mr-4">
                     <div class="single_ihotel_list">
                         <img src="img/services_4.png" alt="">
                         <h3> <a href="#">Musholla</a></h3>

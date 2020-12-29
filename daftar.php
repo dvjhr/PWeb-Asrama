@@ -93,12 +93,12 @@
                     </div>
                     <div class="jkelamin mt-10">
                         <div class="d-flex">
-                            <input class="primary-radio d-flex" type="radio" name="jenis_kelamin" value="laki-laki">
+                            <input class="primary-radio d-flex" type="radio" name="jenis_kelamin" value="Laki-laki">
                             <label for="confirm-radio"></label>
                             <p>Laki-laki</p>
                         </div>
                         <div class="d-flex">
-                            <input class="primary-radio d-flex" type="radio" name="jenis_kelamin" value="perempuan">
+                            <input class="primary-radio d-flex" type="radio" name="jenis_kelamin" value="Perempuan">
                             <label for="confirm-radio"></label>
                             <p>Perempuan</p>
                         </div>
